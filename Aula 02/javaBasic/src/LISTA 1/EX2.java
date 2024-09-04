@@ -9,6 +9,7 @@ public class EX2{
         float Var = 1.0f;
         long longVar = 1L;
         byte byteVar = 100;
+        int y = 10;
 
         System.out.printf("\nO valor de INT é: " + x);
         System.out.printf("\nO texto do CHAR é: " + varchar);
@@ -18,5 +19,6 @@ public class EX2{
         System.out.printf("\nO valor de float é: " + Var);
         System.out.printf("\nO long tem ate 8byt ou 64bits: " + longVar);
         System.out.printf("\nO byte e 8bits e 1byte: " + byteVar);
+        System.out.print(y);
     }
 }
