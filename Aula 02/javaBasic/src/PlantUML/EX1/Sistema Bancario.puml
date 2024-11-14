@@ -1,0 +1,34 @@
+@startuml
+abstract class ContaBancaria {
+    - numeroConta: int
+    # saldo: double
+    + depositar(valor: double): void
+    + sacar(valor: double): boolean
+    + getSaldo(): double
+}
+
+class ContaCorrente extends ContaBancaria {
+    - limiteChequeEspecial: double
+    + imprimir(): void
+}
+
+class ContaPoupanca extends ContaBancaria {
+    + calcularJuros(): double
+    + imprimir(): void
+}
+
+interface Imprimivel {
+    + imprimir(): void
+}
+
+ContaCorrente ..|> Imprimivel
+ContaPoupanca ..|> Imprimivel
+
+class Cliente {
+    - nome: String
+    - cpf: String
+    + getContaBancaria(): ContaBancaria
+}
+
+Cliente *-- ContaBancaria
+@enduml

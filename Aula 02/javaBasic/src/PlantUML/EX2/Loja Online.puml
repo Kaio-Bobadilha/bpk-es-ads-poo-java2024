@@ -1,0 +1,44 @@
+@startuml
+class Produto {
+    - nome: String
+    - preco: double
+    - estoque: int
+}
+
+class CarrinhoDeCompras {
+    - produtos: List<Produto>
+    + adicionarProduto(produto: Produto): void
+    + removerProduto(produto: Produto): void
+    + calcularTotal(): double
+}
+
+class Cliente {
+    - nome: String
+    - email: String
+}
+
+class Pedido {
+    - numeroPedido: int
+    - status: String
+    + processarPedido(): void
+}
+
+interface Pagavel {
+    + processarPagamento(): boolean
+}
+
+class PagamentoCartao implements Pagavel {
+    + processarPagamento(): boolean
+}
+
+class PagamentoBoleto implements Pagavel {
+    + processarPagamento(): boolean
+}
+
+CarrinhoDeCompras o-- Produto
+Pedido o-- CarrinhoDeCompras
+Pedido --> Cliente
+Pedido --> Pagavel
+PagamentoCartao ..|> Pagavel
+PagamentoBoleto ..|> Pagavel
+@enduml

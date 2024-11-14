@@ -1,3 +1,4 @@
+package EXEMPLOS;
 public class ExemploVariaveisPrimitivas {
 
     public static void main(String[] args) {

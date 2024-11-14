@@ -1,3 +1,4 @@
+package EXEMPLOS;
 import java.util.Scanner;
 
 public class EstruturaControleIfElse {

@@ -1,3 +1,4 @@
+package EXEMPLOS;
 public class LacoRepeticaoFor {
     public static void main(String[] args) {
         // Inicialização do array de inteiros
